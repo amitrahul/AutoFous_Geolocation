@@ -9,7 +9,9 @@ export const AutoFocusInput = () => {
     and takes the control of it.
     */
   useEffect(() => {
-    refInput.current?.focus();
+    if (refInput.current !== null) {
+      refInput.current?.focus();
+    }
   }, []);
 
   return (
